@@ -1,0 +1,217 @@
+body{
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    padding-left: 10px;
+}
+    h1{
+        color: #6e8898;
+        text-align: center;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 50px;
+        letter-spacing: 10px;
+        line-height: .9em;
+        text-transform: uppercase;
+    }
+
+    h2{
+        color:rgb(250, 216, 174);
+        margin: 20px; text-align: center;
+        font-weight: 100;
+    }
+    
+    p{
+        color: #F5F3E4;
+        font-size: 100%;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .login p{
+        color: #6e8898;
+        text-align: left;
+    }
+    .travelParent p{
+        color: white;
+        position: relative;
+        margin-bottom: 1px;
+    }
+    
+    a, a:visited{
+        color: #50413a;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        letter-spacing: .14em;
+        line-height: .9em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    a:hover{
+        color:black;
+        font-size: 150%;
+    }
+    .Menu a:hover{
+        color: white;
+        font-size: 150%;
+    }
+
+    .dropMenu a:hover{ 
+        color: black;
+        font-size: 14px;
+    }
+
+    
+    .Menu{
+        background-color: #F1C389;
+        word-spacing: 80px;
+        text-align: center;
+    }
+
+    .dropMenu{
+        display: none;
+    }
+
+    .responsiveImage{
+        width: 100%;
+        height: auto;
+    }
+/* make the background color of all divs the same*/
+    .BlockOne, .pageWrapper1, .pageWrapper2{
+        max-width: 100%;
+        background-color:rgba(209, 121, 79, 0.9);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    
+/* define the flex-direction property for the container on each page*/
+    .homeParent, .projectParent, .travelParent{
+        display: flex;
+        flex-direction: row;
+        box-flex: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 20px;
+    }
+
+    .logo{
+        background-image: url(prof.jpeg);
+        width: 200px; height: 200px;
+        float: left;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+/* Once the screen is smaller than 800px, make the header smaller, the navbar into a dropdown,
+    and change the flex-direction to columns rather than rows */
+@media (max-width: 800px){
+    h1{
+        font-size: 30px;
+        text-align: left;
+    }
+    .navbar{
+        display: none;
+    }
+    .dropMenu{
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;  
+    }
+    .dropDownContent{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropDownContent a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropDownContent a:hover {background-color: #ddd;}
+    .dropMenu:hover .dropDownContent {display: block;}
+
+
+    .homeParent, .projectParent, .travelParent{
+        display: flex;
+        box-flex: row wrap;
+        flex-direction: column;
+        justify-content: space-around;    
+        align-items: stretch;
+        margin: 20px;
+        
+    }
+    .homeParent .child_1{
+        background: rgba(192, 147, 103, 0.5);
+    }
+    .homeParent .child_2{
+        background: rgba(190, 138, 85, 0.5);
+    }
+    .homeParent .child_3{
+        background: rgba(190, 128, 65, 0.5);
+    }
+
+
+    .aboutParent .child_1{
+        background: rgba(190, 138, 85, 0.5);
+    }
+
+}
+
+
+/*The children of the 'Projects Page' parent*/
+.child_2 .companyLogo {
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(crmLogo.jpg);
+    width: 50px;
+    height: 50px;
+}
+.child_1 .companyLogo{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(wuLogo.jpg);
+    width: 50px;
+    height: 50px;
+}
+/*The children of the 'Travel Page' parent*/
+.travelParent .child_1{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(arch.jpg);
+    width: 189;
+    height: 252px;
+}
+
+.travelParent .child_2{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(tree.jpg);
+    width: 189;
+    height: 252px;
+}
+.travelParent .child_3{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(window.jpg);
+    width: 189;
+    height: 252px;
+}
